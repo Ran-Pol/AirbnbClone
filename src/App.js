@@ -8,7 +8,13 @@ function App() {
     <div className="App">
       <Nav />
       <Section />
-      <Card />
+      <Card
+        tag="SOLD OUT"
+        rate={'5.0'}
+        country="USA"
+        host="Life lessons with Katie Zaferes"
+        price={138}
+      />
     </div>
   )
 }
