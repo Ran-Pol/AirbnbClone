@@ -1,26 +1,29 @@
 import React from 'react'
 import { FaStar } from 'react-icons/fa'
-const Card = (props) => {
+const Card = ({ cardList }) => {
+  const { title, price, coverImg, stats, location, openSpots } = cardList
+
   let badge
-  if (props.tag === 0) {
+  if (openSpots === 0) {
     badge = 'SOLD OUT'
-  } else if (props.country === 'Online') {
+  } else if (location === 'Online') {
     badge = 'Online'
   }
-  const image = require(`../images/card/${props.img}`)
+  const image = require(`../images/card/${coverImg}`)
   return (
     <div className="card">
       <img src={image} alt="Swimmer" className="card--img" />
       {badge && <p className="card-tag">{badge}</p>}
       <p>
-        {<FaStar style={{ color: '#FE395C', fontSize: '15px' }} />} {props.rate}{' '}
+        {<FaStar style={{ color: '#FE395C', fontSize: '15px' }} />}{' '}
+        {stats.rating}{' '}
         <span className="card-coutnry">
-          ({props.reviews}) &#8226; {props.country}
+          ({stats.reviewCount}) &#8226; {location}
         </span>
       </p>
-      <p className="card--host">{props.host}</p>
+      <p className="card--host">{title}</p>
       <p>
-        <span className="card-price">From ${props.price} /</span> person
+        <span className="card-price">From ${price} /</span> person
       </p>
     </div>
   )
