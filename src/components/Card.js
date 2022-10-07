@@ -12,7 +12,7 @@ const Card = (props) => {
           ({props.reviews}) &#8226; {props.country}
         </span>
       </p>
-      <p>{props.host}</p>
+      <p className='card--host'>{props.host}</p>
       <p>
         <span className="card-price">From ${props.price} /</span> person
       </p>

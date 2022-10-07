@@ -47,9 +47,12 @@
 /* Card Section */
 .cardContainer{
   display: flex;
-  gap: 40px;
+  gap: 30px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   padding: 0 40px;
   margin: 20px 0;
+ 
 }
 
 .card {
@@ -58,10 +61,14 @@
   font-weight: 300;
   color: #222222;
   width: 175px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
 }
 .card--img {
   width: 100%;
   border-radius: 9px;
+  margin-bottom: 5px;
 }
 .card-tag {
   position: absolute;
@@ -73,6 +80,11 @@
   padding: 2px;
   font-size: 10px;
   text-align: center;
+}
+
+.card--host{
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 .card-coutnry {

@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../images/airbnb 1.svg'
 const Nav = () => {
   return (
-    <nav class='navAirbnb'>
+    <nav className='navAirbnb'>
       <img src={logo} alt='airbnb logo' />
     </nav>
   )
