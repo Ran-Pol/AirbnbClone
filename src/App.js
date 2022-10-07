@@ -10,7 +10,7 @@ function App() {
       <Card
       key={card.id}
         img={card.coverImg}
-        tag="TRENDING"
+        tag={card.openSpots}
         rate={card.stats.rating}
         country={card.location}
         host={card.title}
