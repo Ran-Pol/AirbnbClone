@@ -16,6 +16,10 @@
   /* background-color: aqua; */
 }
 
+.header--img {
+  width: 400px;
+}
+
 .Header-Intro h1 {
   font-style: normal;
   font-weight: 600;
@@ -41,8 +45,14 @@
 }
 
 /* Card Section */
+.cardContainer{
+  display: flex;
+  gap: 40px;
+  padding: 0 40px;
+  margin: 20px 0;
+}
 
-.card--container {
+.card {
   position: relative;
   font-size: 12px;
   font-weight: 300;
@@ -51,6 +61,7 @@
 }
 .card--img {
   width: 100%;
+  border-radius: 9px;
 }
 .card-tag {
   position: absolute;
